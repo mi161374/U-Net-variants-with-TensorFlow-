@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#PBS -q gpuvolta
+#PBS -l ncpus=24
+#PBS -l ngpus=2
+#PBS -M mahdi.imani@unimelb.edu.au
+#PBS -m abe
+#PBS -l walltime=14:00:00
+#PBS -l mem=240gb
+#PBS -l storage=scratch/nk53
+
+
+source /home/563/mi3051/miniconda3/etc/profile.d/conda.sh
+conda activate mros_env
+source /home/563/mi3051/pyenv/bin/activate
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
+
+cd /home/563/mi3051/project_files
+
+python3 main.py
+
+
+

@@ -1,0 +1,9 @@
+albumentations
+matplotlib
+MedPy
+numpy
+pydicom
+scikit_image
+scikit_learn
+tensorflow
+tqdm
